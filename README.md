@@ -1,9 +1,9 @@
 # Starvation-Free-Reader-Writer-Problem Solution
 ## Aniket Mathur(17116008)
 
-The core code is in a .cpp file named **starvationfree.cpp**. The program can be executed by runing the above cpp file.
+The core code is in a .cpp file named **starvation_free.cpp**. The program can be executed by runing the above cpp file.
 
-There are two functions reader and writer. It is considered that there are 20 reader threads and 5 writer threads. The **pthread.h** library of C++ is used to generate threads. The reader and writer threads reads/writes a global variables `shared_var`. Semaphores used are `rcnt`, `addt` and `rdwr`.
+There are two functions `reader` and `writer`. It is considered that there are 20 reader threads and 5 writer threads. The **pthread.h** library of C++ is used to generate threads. The reader and writer threads reads/writes a global variables `shared_var`. Semaphores used are `rcnt`, `addt` and `rdwr`.
 
 # Semaphores
 Semaphore is simply a variable that is non-negative and shared between threads. A semaphore is a signaling mechanism, and a thread that is waiting on a semaphore can be signaled by another thread. It uses two atomic operations, 1)wait, and 2) signal for the process synchronization. The following sempahores are used here:
@@ -166,4 +166,4 @@ Reader-19 is in the EXIT_SECTION
 
 # Observation
 
-From the output it is clear that neither reader nor wirter is given priority. Writers are able to write even if the readers are waiting. Even if there are readers in the queue, the writers enter the entry section. This is not the case with with reader priority solution. Hence writer is able to write even if a reader is in the queue. So the solution is **starvation free**.
+From the output it is clear that neither reader nor wirter is given priority. Writers are able to write even if the readers are waiting. Even if there are readers in the queue, the writers enter the entry section. This is not the case with reader priority solution. Hence writer is able to write even if a reader is in the queue. So the solution is **starvation free**.
