@@ -27,28 +27,25 @@ void *reader(void *i){
     //waiting for other reader/writer to release     
     sem_wait(&addt);
 
+    printf("Reader-%d is in the ENTRY_SECTION\n",i);
     sem_wait(&rcnt);
     r_counter++;
     if(r_counter==1)
         sem_wait(&rdwr); //wait if writer is writing 
-
-    printf("Reader-%d is in the ENTRY_SECTION\n",i);
     
     sem_post(&rcnt);
-    sem_post(&addt);
+    sem_post(&addt);    
 
     //CRITICAL_SECTION
 
     printf("Reader-%d is reading the value = %d\n",i,shared_var);
 
     //EXIT_SECTION
-
+    printf("Reader-%d is in the EXIT_SECTION\n",i);
     sem_wait(&rcnt);
     r_counter--;
     if(r_counter==0)
         sem_post(&rdwr);
-    
-    printf("Reader-%d is in the EXIT_SECTION\n",i);
 
     sem_post(&rcnt);
 

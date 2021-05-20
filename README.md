@@ -88,29 +88,29 @@ Similar to reader code only change is semaphore `addt`.
 
 ```
 Reader-0 is in the ENTRY_SECTION
-Reader-0 is reading the value = 10
 Reader-1 is in the ENTRY_SECTION
+Reader-0 is reading the value = 10
 Reader-0 is in the EXIT_SECTION
 Reader-1 is reading the value = 10
 Reader-2 is in the ENTRY_SECTION
 Reader-1 is in the EXIT_SECTION
-Reader-2 is reading the value = 10
 Reader-3 is in the ENTRY_SECTION
+Reader-2 is reading the value = 10
+writer-0 is in the ENTRY_SECTION
 Reader-3 is reading the value = 10
 Reader-2 is in the EXIT_SECTION
-writer-0 is in the ENTRY_SECTION
-writer-0 is writing value= 25 
 Reader-3 is in the EXIT_SECTION
+writer-0 is writing value= 25 
 writer-0 is in the EXIT_SECTION
 Reader-4 is in the ENTRY_SECTION
-Reader-5 is in the ENTRY_SECTION
 Reader-4 is reading the value = 25
-Reader-5 is reading the value = 25
-Reader-6 is in the ENTRY_SECTION
-Reader-6 is reading the value = 25
 Reader-4 is in the EXIT_SECTION
-writer-1 is in the ENTRY_SECTION
+Reader-5 is in the ENTRY_SECTION
+Reader-5 is reading the value = 25
 Reader-5 is in the EXIT_SECTION
+Reader-6 is in the ENTRY_SECTION
+writer-1 is in the ENTRY_SECTION
+Reader-6 is reading the value = 25
 Reader-6 is in the EXIT_SECTION
 writer-1 is writing value= 40
 writer-1 is in the EXIT_SECTION
@@ -119,49 +119,49 @@ writer-2 is writing value= 55
 writer-2 is in the EXIT_SECTION
 Reader-7 is in the ENTRY_SECTION
 Reader-8 is in the ENTRY_SECTION
-Reader-8 is reading the value = 55
 Reader-7 is reading the value = 55
-Reader-9 is in the ENTRY_SECTION
-Reader-8 is in the EXIT_SECTION
-Reader-9 is reading the value = 55
 Reader-7 is in the EXIT_SECTION
-Reader-10 is in the ENTRY_SECTION
+Reader-8 is reading the value = 55
+Reader-8 is in the EXIT_SECTION
+Reader-9 is in the ENTRY_SECTION
+Reader-9 is reading the value = 55
 Reader-9 is in the EXIT_SECTION
+Reader-10 is in the ENTRY_SECTION
 Reader-10 is reading the value = 55
+Reader-10 is in the EXIT_SECTION
 Reader-11 is in the ENTRY_SECTION
 Reader-11 is reading the value = 55
-Reader-10 is in the EXIT_SECTION
 Reader-12 is in the ENTRY_SECTION
-Reader-12 is reading the value = 55
 Reader-11 is in the EXIT_SECTION
 Reader-13 is in the ENTRY_SECTION
-Reader-12 is in the EXIT_SECTION
+Reader-12 is reading the value = 55
 writer-3 is in the ENTRY_SECTION
 Reader-13 is reading the value = 55
-writer-3 is writing value= 70
-writer-3 is in the EXIT_SECTION
 Reader-13 is in the EXIT_SECTION
+Reader-12 is in the EXIT_SECTION
+writer-3 is writing value= 70 
+writer-3 is in the EXIT_SECTION
 Reader-14 is in the ENTRY_SECTION
-Reader-15 is in the ENTRY_SECTION
-Reader-15 is reading the value = 70
 Reader-14 is reading the value = 70
-Reader-16 is in the ENTRY_SECTION
-Reader-16 is reading the value = 70
-Reader-15 is in the EXIT_SECTION
+Reader-15 is in the ENTRY_SECTION
 Reader-14 is in the EXIT_SECTION
-Reader-17 is in the ENTRY_SECTION
+Reader-16 is in the ENTRY_SECTION
+Reader-15 is reading the value = 70
+Reader-15 is in the EXIT_SECTION
+Reader-16 is reading the value = 70
 Reader-16 is in the EXIT_SECTION
+Reader-17 is in the ENTRY_SECTION
 Reader-17 is reading the value = 70
+Reader-17 is in the EXIT_SECTION
 Reader-18 is in the ENTRY_SECTION
 Reader-18 is reading the value = 70
-Reader-17 is in the EXIT_SECTION
 Reader-19 is in the ENTRY_SECTION
 Reader-19 is reading the value = 70
-Reader-18 is in the EXIT_SECTION
 writer-4 is in the ENTRY_SECTION
+Reader-18 is in the EXIT_SECTION
+Reader-19 is in the EXIT_SECTION
 writer-4 is writing value= 85
 writer-4 is in the EXIT_SECTION
-Reader-19 is in the EXIT_SECTION
 ```
 
 # Observation
